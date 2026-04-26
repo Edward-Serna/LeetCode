@@ -28,3 +28,6 @@ n == queries[i].length == dictionary[j].length
 1 <= n <= 100
 All queries[i] and dictionary[j] are composed of lowercase English letters.
 ```
+
+## Note
+> https://leetcode.com/problems/words-within-two-edits-of-dictionary

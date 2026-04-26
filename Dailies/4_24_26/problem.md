@@ -36,6 +36,8 @@ moves consists only of characters 'L', 'R' and '_'.
 # Note
 > This problem is worded strangely and you should replace '_' with the character that appears the most.
 > 
+> https://leetcode.com/problems/furthest-point-from-origin
+
 **SOLUTION**
 ```cpp
 class Solution {

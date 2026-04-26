@@ -27,10 +27,13 @@ Since each element in nums is distinct, arr[i] = 0 for all i.
 0 <= nums[i] <= 109
 ```
 
-# Time Limit Exceeded‼️ 
+# Time Complexity
 **Current complexity:** ``O(N^2)``\
 **Suggested complexity:** ``O(N)``\
 **Suggestions:** ``Group indices by value and use prefix sums to calculate distances in linear time instead of nested loops.``
+
+## Note
+> https://leetcode.com/problems/sum-of-distance
 
 **SOLUTION**
 ```Cpp
