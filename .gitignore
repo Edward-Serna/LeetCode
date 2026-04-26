@@ -1,0 +1,61 @@
+###################
+# Build directories
+###################
+build/
+build-*/
+out/
+out-*/
+cmake-build-*/
+_build/
+bin/
+obj/
+
+########################
+# CMake generated files
+########################
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+*.cmake
+!CMakeLists.txt
+
+#################
+# Compiled output
+#################
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+########
+# IDEs
+########
+# CLion / JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+.DS_Store
+Thumbs.db
+desktop.ini
