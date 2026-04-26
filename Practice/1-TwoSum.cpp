@@ -26,7 +26,6 @@ public:
     }
 };
 
-
 int main() {
     vector<int> nums1 = {2, 7, 11, 15};
     const int target1 = 9;

@@ -25,7 +25,6 @@ public:
     }
 };
 
-
 int main() {
     vector<int> nums1 = {1, 1, 2};
     Solution example1;
