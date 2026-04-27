@@ -33,7 +33,7 @@ All queries[i] and dictionary[j] are composed of lowercase English letters.
 > https://leetcode.com/problems/words-within-two-edits-of-dictionary
 
 **SOLUTION**
-```Cpp
+```C++
 class Solution {
 public:
     vector<string> twoEditWords(vector<string>& queries,

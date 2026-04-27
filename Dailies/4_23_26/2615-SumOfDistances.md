@@ -6,7 +6,7 @@ Return the array `arr`.
 **Input:** ``nums = [1,3,1,1,2] ``\
 **Output:** ``[5,0,3,4,0]``\
 **Explanation:**
-```cpp
+```c++
 When i = 0, nums[0] == nums[2] and nums[0] == nums[3]. Therefore, arr[0] = |0 - 2| + |0 - 3| = 5. 
 When i = 1, arr[1] = 0 because there is no other index with value 3.
 When i = 2, nums[2] == nums[0] and nums[2] == nums[3]. Therefore, arr[2] = |2 - 0| + |2 - 3| = 3. 

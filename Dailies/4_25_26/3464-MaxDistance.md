@@ -41,7 +41,7 @@ Select the points `(0, 0)`, `(0, 1)`, `(0, 2)`, `(1, 2)`, and `(2, 2)`.
 
 
 **SOLUTION**
-```Cpp
+```C++
 class Solution {
 public:
     int maxDistance(int side, vector<vector<int>>& points, int k) {

@@ -39,7 +39,7 @@ moves consists only of characters 'L', 'R' and '_'.
 > https://leetcode.com/problems/furthest-point-from-origin
 
 **SOLUTION**
-```cpp
+```c++
 class Solution {
 public:
     int furthestDistanceFromOrigin(string moves) {
