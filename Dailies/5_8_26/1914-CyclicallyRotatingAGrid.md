@@ -76,7 +76,10 @@ public:
     }
 };
 ```
-### Time Complexity Analysis
-**Time complexity:** 
+### Complexity Analysis
+> Let `m` and `n` be the number of rows and columns of `grid`, respectively.
 
+**Time complexity:**
+`O(mn)`\
 **Space complexity:**
+`O(m+n)`
