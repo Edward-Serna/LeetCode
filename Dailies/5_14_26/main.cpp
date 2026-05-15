@@ -8,18 +8,33 @@ public:
     bool isGood( vector<int>& nums ) {
         int max = 0;
         int count = 0;
+        vector<int> matches;
 
-        for (auto const n : nums) {
-            if (n == max)
-                count++;
-            if (n > max) {
-                max = n;
-                count = 0;
+        for (int i = 0; i < nums.size()-1; i++) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+            for (int j = i+1; j < nums.size(); j++) {
+                if (nums[i] == nums[j]) {
+                    matches.push_back(nums[i]);
+                    count++;
+                }
             }
         }
+
+        for (int v = 0; v < nums.size()-1; v++){
+            if (matches.size()>0 && nums.size() >2){
+                if (matches[0] < nums[v])
+                    return false;
+            }
+        }
+
+        if (max != nums.size()+1){
+            return false;
+        }
+
         if (count != 1)
             return false;
-
         return true;
     }
 };
@@ -57,7 +72,7 @@ int main() {
     cout << "Output: \n" << sol.isGood(arr4) << endl;
 
     // Example 5: nums = [5, 7, 3, 1, 5, 2, 6, 4] → expected: false [0]
-    vector arr5 = {5, 7, 3, 1, 5, 2, 6, 4, 0};
+    vector arr5 = {3, 3, 1, 7};
     cout << "Input: \n";
     printArray(arr5);
     cout << "Output: \n" << sol.isGood(arr5) << endl;
