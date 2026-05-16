@@ -5,21 +5,14 @@ using namespace std;
 
 class Solution {
 public:
-    bool isGood( vector<int>& nums ) {
-        int max = 0;
-        int count = 0;
-
-        for (auto const n : nums) {
-            if (n == max)
-                count++;
-            if (n > max) {
-                max = n;
-                count = 0;
-            }
+    bool isGood(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> count(n, 0);
+        for (int a : nums) {
+            if (a >= n || a < n - 1 && count[a] > 0 || a == n - 1 && count[a] > 1)
+                return false;
+            count[a]++;
         }
-        if (count != 1)
-            return false;
-
         return true;
     }
 };
