@@ -1,4 +1,4 @@
-# 2784. Check if Array is Good
+# 2784. Check if Array is Good [Easy]
 > You are given an integer array `nums`. We consider an array **good** if it is a permutation of an array `base[n]`.
 > 
 > `base[n] = [1, 2, ..., n - 1, n, n]` (in other words, it is an array of length n + 1 which contains `1` to `n - 1` 
