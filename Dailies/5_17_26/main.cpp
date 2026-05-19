@@ -9,23 +9,18 @@ public:
     bool canReach(vector<int>& arr, int start) {
         vector visited(arr.size(), false); // Each Idx NOT visited (false)
         queue<int> steps;
-
         steps.emplace(start);
-
         while (!steps.empty()){
             int i = steps.front(); // Grab front of step queue and set i (curr idx)
             steps.pop();
-
             if (i < 0 || i >= arr.size() || visited[i])
                 continue;
             if (arr[i] == 0)
                 return true;
-
             visited[i] = true;
             steps.push(i + arr[i]);
             steps.push(i - arr[i]);
         }
-
         return false;
     }
 };
