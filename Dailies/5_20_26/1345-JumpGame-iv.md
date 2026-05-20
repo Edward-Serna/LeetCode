@@ -58,6 +58,6 @@ public:
 ```
 ### Complexity Analysis
 
-**Time complexity:** `O(n^3)`\
+**Time complexity:** `O(n^3)`
 
 **Space complexity:** `O(1)`
