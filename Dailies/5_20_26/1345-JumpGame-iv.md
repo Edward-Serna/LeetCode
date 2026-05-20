@@ -32,10 +32,32 @@
 
 **SOLUTION**
 ```C++
-
+class Solution {
+public:
+    vector<int> findThePrefixCommonArray(vector<int>& A, vector<int>& B) {
+        int n = A.size();
+        vector<int> C(n);
+        // Loop through each index to calculate common elements for each prefix
+        for (int i = 0; i < n; ++i) {
+            int count = 0;
+            // Compare elements in A and B within the range of the current prefix
+            for (int aIndex = 0; aIndex <= i; ++aIndex) {
+                for (int bIndex = 0; bIndex <= i; ++bIndex) {
+                    // Check if elements match, and count if they do
+                    if (A[aIndex] == B[bIndex]) {
+                        ++count;
+                        break;
+                    }
+                }
+            }
+            C[i] = count;
+        }
+        return C;
+    }
+};
 ```
 ### Complexity Analysis
 
-**Time complexity:**
+**Time complexity:** `O(n^3)`\
 
-**Space complexity:** 
+**Space complexity:** `O(1)`
