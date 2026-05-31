@@ -17,7 +17,6 @@
 **Input:** `s = "01101110", minJump = 2, maxJump = 3`\
 **Output:** `false`
 
-
 ## Constraints:
 - `2 <= s.length <= 10^5`
 - `s[i]` is either `'0'` or `'1'`.
