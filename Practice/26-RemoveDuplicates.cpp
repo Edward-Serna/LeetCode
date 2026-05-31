@@ -1,7 +1,7 @@
 //
 // Created by serna on 4/25/2026.
 //
-// https://leetcode.com/problems/two-sum/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 // [Solution can be found after Main]
 
 #include <iostream>
@@ -11,36 +11,59 @@ using namespace std;
 
 class Solution {
 public:
-    int removeDuplicates( vector<int>& nums ) {
+    int removeDuplicates(vector<int>& nums) {
         if (nums.empty()) return 0;
+        int idx = 1;
 
-        int k = 1;
-        for (int j = 0; j < nums.size(); j++) {
-            if (nums[j] != nums[k - 1]) {
-                nums[k] = nums[j];
-                k++;
+        for(int i=0; i<nums.size(); i++){
+            if (nums[i] != nums[idx - 1]) {
+                nums[idx] = nums[i];
+                idx++;
             }
         }
-        return k;
+        return idx;
     }
 };
 
+void printArray(const vector<int> &arr) {
+    cout << "[ ";
+    for (const auto val: arr)
+        cout << val << " ";
+    cout << "]" << endl;
+}
+
 int main() {
+    Solution sol;
     vector<int> nums1 = {1, 1, 2};
-    Solution example1;
-    cout << "Removed: " << example1.removeDuplicates(nums1) << " results" << endl;
-    for (auto i : nums1) {
-        cout << i << " ";
-    }
+    cout << "Input: \n";
+    printArray(nums1);
+    cout << "Output: " << sol.removeDuplicates(nums1)<< endl;
+    printArray(nums1);
+    cout << endl;
 
     vector<int> nums2 = {0,0,1,1,1,2,2,3,3,4};
-    Solution example2;
-    cout << "Removed: " << example2.removeDuplicates(nums2) << " results" << endl;
-    for (auto i : nums2) {
-        cout << i << " ";
-    }
+    cout << "Input: \n";
+    printArray(nums2);
+    cout << "Output: " << sol.removeDuplicates(nums2) << endl;
+    printArray(nums2);
+
+    return 0;
 }
 
 //////////////////////////////
 //   [Leet Code Solution]   //
 //////////////////////////////
+// class Solution {
+// public:
+//     int removeDuplicates(vector<int>& nums) {
+//         if(nums.size() == 0) return 0;
+//         int res = 1;
+//         for(int i = 1; i < nums.size(); i++){
+//             if(nums[i] != nums[i - 1]){
+//                 nums[res] = nums[i];
+//                 res++;
+//             }
+//         }
+//         return res;
+//     }
+// };
