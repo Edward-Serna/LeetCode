@@ -7,7 +7,8 @@ public:
     int earliestFinishTime(vector<int>& landStartTime, vector<int>& landDuration,
                            vector<int>& waterStartTime, vector<int>& waterDuration) {
         int minVal = INT_MAX;
-        int land_water = INT_MAX;  int water_land = INT_MAX;
+
+        int land_water = INT_MAX;  int water_land = INT_MAX; // Land-then-Water || Water-then-Land
         for (int i = 0; i < landStartTime.size(); i++) {
             minVal = min(minVal, landStartTime[i] + landDuration[i]);
         }
