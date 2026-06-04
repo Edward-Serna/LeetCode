@@ -1,6 +1,6 @@
 # 3751. Total Waviness of Numbers in Range I [Medium]
 > You are given two integers `num1` and `num2` representing an **inclusive** range `[num1, num2]`.\
-> The **waviness** of a number is defined as the total count of its **peaks** and **valleys**:\
+> The **waviness** of a number is defined as the total count of its **peaks** and **valleys**:
 >  - A digit is a **peak** if it is **strictly greater** than both of its immediate neighbors.
 >  - A digit is a **valley** if it is **strictly less** than both of its immediate neighbors.
 >  - The first and last digits of a number **cannot** be peaks or valleys.
@@ -50,9 +50,35 @@ Number 4848: the second digit 8 is a peak, and the third digit 4 is a valley, gi
  
 ### SOLUTION
 ```C++
+class Solution {
+public:
+    int totalWaviness(int num1, int num2) {
+        auto getWaviness = [](int x) -> int {
+            string s = to_string(x);
+            int waviness = 0;
+
+            for (size_t i = 1; i < s.size() - 1; ++i) {
+                bool isPeak = s[i] > s[i - 1] && s[i] > s[i + 1];
+                bool isValley = s[i] < s[i - 1] && s[i] < s[i + 1];
+                if (isPeak || isValley) {
+                    ++waviness;
+                }
+            }
+
+            return waviness;
+        };
+
+        int total = 0;
+        for (int i = num1; i <= num2; ++i) {
+            total += getWaviness(i);
+        }
+
+        return total;
+    }
+};
 ```
 ### Complexity Analysis
 
-**Time complexity:**
+**Time complexity:** `O(nums2*log(num2))`
 
-**Space complexity:** 
+**Space complexity:** `O(log(num2))`
