@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-
 class Solution {
 public:
     int earliestFinishTime(vector<int>& landStartTime, vector<int>& landDuration,
@@ -42,14 +41,14 @@ int main() {
 
     // Example 1: landStartTime  = [2,8], landDuration = [4,1],
     //            waterStartTime = [6],   waterDuration = [9]   → expected: 9
-    // vector<int> landStartTime1  = {2,8}; vector<int> landDuration1  = {4,1};
-    // vector<int> waterStartTime1 = {6};   vector<int> waterDuration1 = {3};
-    // cout << "Input: \n";
-    // printArray(landStartTime1); printArray(waterStartTime1); cout<<endl;
-    // printArray(landDuration1);  printArray(waterDuration1);
-    // cout << "\nOutput: \n"
-    // << sol.earliestFinishTime(landStartTime1, landDuration1,
-    //                          waterStartTime1, waterDuration1) <<endl<<endl;
+    vector<int> landStartTime1  = {2,8}; vector<int> landDuration1  = {4,1};
+    vector<int> waterStartTime1 = {6};   vector<int> waterDuration1 = {3};
+    cout << "Input: \n";
+    printArray(landStartTime1); printArray(waterStartTime1); cout<<endl;
+    printArray(landDuration1);  printArray(waterDuration1);
+    cout << "\nOutput: \n"
+    << sol.earliestFinishTime(landStartTime1, landDuration1,
+                             waterStartTime1, waterDuration1) <<endl<<endl;
 
 
     // Example 2: landStartTime = [41,59,14],  landDuration  = [8,74,45],
