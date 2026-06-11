@@ -6,24 +6,23 @@ class Solution {
 public:
     static constexpr int MOD = 1e9 + 7;
     static int dfs(vector<vector<int>>& adj, const int node, const int par) {
-        int depth = 0;
+        int depth = 0; // Initialize depth
         for (const auto &val : adj[node]) {
             if (val == par) continue;
-            depth = max(depth, 1 + dfs(adj, val, node));
+            depth = max(depth, 1 + dfs(adj, val, node)); // Recursively travel through with new node start
         }
         return depth;
     }
 
     int assignEdgeWeights(vector<vector<int>>& edges) {
-        vector<vector<int>> adjacentNodes((edges.size() + 1) + 1);
+        vector<vector<int>> weightedNodes(edges.size() + 2);
         for (auto &edge : edges) { // Assign weights for edges
-            int top = edge[0];           int bottom = edge[1];
-            adjacentNodes[top].push_back(bottom);    adjacentNodes[bottom].push_back(top);
+            int top = edge[0];                      int bottom = edge[1];
+            weightedNodes[top].push_back(bottom);   weightedNodes[bottom].push_back(top);
         }
-
-        const int depth = dfs(adjacentNodes, 1, -1); // Finds depth of graph
-        long long result = 1;
-        for (int i = 1; i < depth; i++) {
+        const int depth = dfs(weightedNodes, 1, -1); // Finds depth of graph
+        int result = 1;
+        for (int i = 1; i < depth; i++) { // Depth >= 1, Verification Phase
             result = (result * 2) % MOD;
         }
         return result;
