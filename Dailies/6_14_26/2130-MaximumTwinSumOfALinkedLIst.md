@@ -8,7 +8,7 @@
 > Given the `head` of a linked list with even length, return _the **maximum twin sum** of the linked list_.
 
 ## Example 1:
-<img width="200" src="resouces/img.png">\
+<img width="200" src="resources/img.png">\
 **Input:** `head = [5,4,2,1]`\
 **Output:** `6`\
 **Explanation:** 
@@ -19,7 +19,7 @@ Thus, the maximum twin sum of the linked list is 6.
 ```
 
 ## Example 2:
-<img width="200" src="resouces/img_1.png">\
+<img width="200" src="resources/img_1.png">\
 **Input:** `head = [4,2,2,3]`\
 **Output:** `7`\
 **Explanation:**
@@ -31,7 +31,7 @@ The nodes with twins present in this linked list are:
 ```
 
 ## Example 3:
-<img width="150" src="resouces/img_2.png">\
+<img width="150" src="resources/img_2.png">\
 **Input:** `head = [1,100000]`\
 **Output:** `100001`\
 **Explanation:**
@@ -45,7 +45,9 @@ There is only one node with a twin in the linked list having twin sum of 1 + 100
 
 ## Note
 > https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list
- 
+>
+> <img src="resources/Singly-linked-list.drawio.png" width="450">
+
 ### SOLUTION 
 ```C++
 class Solution {
