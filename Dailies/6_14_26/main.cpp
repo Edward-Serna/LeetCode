@@ -42,13 +42,15 @@ public:
 
 ListNode* createLinkList(const vector<int>& nums) {
     if (nums.empty()) return nullptr;
-    ListNode* head = new ListNode(nums[0]);
-    ListNode* curr = head;
+    ListNode* head = new ListNode(nums[0]); // Keeps head ptr available
+    ListNode* curr = head; // Traversal ptr
+
     for (int i=1; i<nums.size(); i++) {
         curr->next = new ListNode(nums[i]);
         curr = curr->next;
+
     }
-    return head;
+    return head; // Return first Link (Head)
 }
 
 void deleteList(const ListNode* head) {
